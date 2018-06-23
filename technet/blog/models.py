@@ -12,7 +12,7 @@ class Post(models.Model):
 
     def publish(self):
         self.published_date = timezone.now() # This is to get the current time when published
-        self.save
+        self.save()
     def approve_comment(self):
         return self.comments.filter(approved_comment=True) # This is a way to filter out comments that have been approved.
     def get_absolute_url(self):

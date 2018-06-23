@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
   </head>
 
   <body class ="loader">
@@ -28,8 +28,6 @@
         <ul class ="nav navbar-nav">
           <li><a class ="navbar-brand bigbrand" href ="{% url 'post_list' %}">My Blog</a></li>
           <li><a href ="{% url 'about' %}">About</a></li>
-          <li><a href ="https://www.github.com">GitHub</a></li>
-          <li><a href ="https://www.linkedin.com">Linkedin</a></li>
         </ul>
         <ul class ="nav navbar-nav navbar-right">
           {% if user.is_authenticated%}
@@ -43,7 +41,7 @@
               <a href ="{% url 'logout'%}">Logout</a>
             </li>
             <li>
-              <a>Welcome: {{user.username}}</a>
+              <a>Welcome, {{user.username}}!</a>
             </li>
             {% else %}
             <li><a class="nav navbar-right" href ="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span></a></li>
