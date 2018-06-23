@@ -1,0 +1,1 @@
+Created a blog app using Python, HTML, CSS, Bootstrap, Django. This is site allows users to share their blogs with an addition of comments. This is a way to socialize with other users and be in contact with them.
